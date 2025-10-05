@@ -50,6 +50,7 @@ export default function About() {
       items: about.technical.skills.map((skill) => skill.title),
     },
   ];
+
   return (
     <Column maxWidth="m">
       <Schema
@@ -65,19 +66,8 @@ export default function About() {
           image: `${baseURL}${person.avatar}`,
         }}
       />
-      {about.tableOfContent.display && (
-        <Column
-          left="0"
-          style={{ top: "50%", transform: "translateY(-50%)" }}
-          position="fixed"
-          paddingLeft="24"
-          gap="32"
-          s={{ hide: true }}
-        >
-          <TableOfContents structure={structure} about={about} />
-        </Column>
-      )}
-      <Row fillWidth s={{ direction: "column"}} horizontal="center">
+      {/* 👉 gap augmenté à 96 */}
+      <Row fillWidth s={{ direction: "column" }} horizontal="center" gap="64">
         {about.avatar.display && (
           <Column
             className={styles.avatar}
@@ -87,13 +77,15 @@ export default function About() {
             s={{ position: "relative", style: { top: "auto" } }}
             xs={{ style: { top: "auto" } }}
             minWidth="160"
-            paddingX="l"
+            paddingX="s"
             paddingBottom="xl"
             gap="m"
             flex={3}
-            horizontal="center"
+            horizontal="start"
           >
-            <Avatar src={person.avatar} size="xl" />
+            <div className="avatar-gradient">
+            <img src={person.avatar} alt={person.name} />
+            </div>
             <Row gap="8" vertical="center">
               <Icon onBackground="accent-weak" name="globe" />
               {person.location}
@@ -107,8 +99,16 @@ export default function About() {
                 ))}
               </Row>
             )}
+
+            {/*  Menu sous l’avatar */}
+            {about.tableOfContent.display && (
+              <Column gap="16" paddingTop="l">
+                <TableOfContents structure={structure} about={about} />
+              </Column>
+            )}
           </Column>
         )}
+
         <Column className={styles.blockAlign} flex={9} maxWidth={40}>
           <Column
             id={about.intro.title}
@@ -142,6 +142,7 @@ export default function About() {
                 />
               </Row>
             )}
+
             <Heading className={styles.textAlign} variant="display-strong-xl">
               {person.name}
             </Heading>

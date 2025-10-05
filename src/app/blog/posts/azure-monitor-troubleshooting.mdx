@@ -1,0 +1,85 @@
+---
+title: "Troubleshooting with Azure Monitor: How to Use Logs to Solve Problems"
+summary: "A hands-on guide to using Azure Monitor and Log Analytics to troubleshoot common issues in the cloud."
+image: "/images/illust/azrfix.png"
+publishedAt: "2025-10-02"
+tag: "Cloud/DevOps"
+---
+
+# 🔎 Troubleshooting with Azure Monitor: How to Use Logs to Solve Problems
+
+One of the biggest challenges in the cloud is **troubleshooting**. When something goes wrong — an app crashes, a database slows down, or a network fails — you need the right tools to find the cause quickly. On Azure, the key to problem-solving is **Azure Monitor and Log Analytics**.  
+
+---
+
+## 📊 What is Azure Monitor?
+
+Azure Monitor collects and analyzes **telemetry data** from all your cloud resources:  
+- Performance metrics (CPU, memory, disk).  
+- Application logs.  
+- Security events.  
+- Network diagnostics.  
+
+Think of it as the **black box recorder** of your cloud environment.  
+
+---
+
+## 🗂 Types of Logs You Can Use
+
+Azure Monitor generates different logs:  
+
+- **Activity Logs** → high-level operations (who created a VM, who deleted a resource).  
+- **Diagnostic Logs** → detailed info about services (SQL queries, failed requests).  
+- **Metrics** → performance counters like CPU %, request latency, or throughput.  
+- **Application Insights** → app-level telemetry (exceptions, dependencies).  
+
+---
+
+## 🛠 How to Troubleshoot Step by Step
+
+### 1. Detect the Problem  
+Use **Metrics Explorer** to see anomalies (e.g., CPU suddenly at 90%).  
+
+### 2. Drill into Logs  
+Go to **Log Analytics** and run KQL (Kusto Query Language) queries:  
+
+```sql
+AppRequests
+| where success == false
+| summarize count() by resultCode
+```
+
+👉 This query shows failed HTTP requests and their error codes.  
+
+### 3. Correlate Events  
+Once you identify unusual activity, check the **Activity Logs** to see if a **deployment, update, or configuration change** happened around the same time.  
+This correlation helps you understand **whether the issue is caused by code, infrastructure, or user action**.  
+
+Example: a spike in errors right after a new release = likely a bad deployment.  
+
+### 4. Alert and Automate  
+Create **alerts** so Azure notifies you when thresholds are reached (e.g., response time > 2s).  
+You can even connect alerts to **Logic Apps** or **Azure Functions** to trigger automatic remediation.  
+
+---
+
+## ⚡ Example: Slow Web App  
+
+- **Problem**: A web app is loading slowly.  
+- **Investigation**:  
+  1. Metrics show high CPU usage.  
+  2. Log Analytics reveals a specific SQL query timing out.  
+  3. Activity Logs confirm a recent deployment introduced inefficient queries.  
+- **Solution**: Optimize the query + scale the database.  
+
+---
+
+## ✅ Conclusion
+
+Troubleshooting in Azure is all about **logs + metrics + context**.  
+With Azure Monitor and Log Analytics, you can:  
+- Detect issues in real time.  
+- Correlate root causes with recent changes.  
+- Automate alerts and even self-healing actions.  
+
+👉 Next step: explore how to integrate **Azure Monitor with Grafana or Power BI** for even deeper insights.  

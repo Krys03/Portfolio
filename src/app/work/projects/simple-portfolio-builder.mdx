@@ -1,7 +1,64 @@
 ---
-title: "Once UI: Open-source design system"
-publishedAt: "2024-04-08"
+title: "Deploying a Scalable Web App on Azure App Service"
+publishedAt: "2025-10-14"
+summary: "A full-stack Java + React web application deployed on Azure App Service with automated CI/CD via GitHub Actions and cloud monitoring through Application Insights."
 images:
-  - "/images/projects/project-01/cover-04.jpg"
-  - "/images/projects/project-01/video-01.mp4"
+  - "/images/projects/projet-03/deploy.png"
+  - "/images/projects/projet-03/appazure.jpeg"
+  - "/images/projects/projet-03/appins.png"
+ 
+team:
+  - name: "Chris Lopez"
+    role: "Cloud & DevOps Engineer"
+    avatar: "/images/me1.jpeg"
+    linkedIn: "https://www.linkedin.com/in/chris-lopez-709620194/"
+link: "https://github.com/chrislopezdev/azure-webapp-deploy"
 ---
+
+# ☁️ Deploying a Scalable Web App on Azure App Service
+
+## 🎯 Objective
+Deploy a **Java Spring Boot + React web application** to **Azure App Service**, integrating continuous deployment from GitHub and observability via **Application Insights**.  
+The goal was to automate deployments, ensure scalability, and maintain real-time visibility into app performance.
+
+---
+
+## 🛠️ Solution
+- **Configured Azure App Service** to host the application with an integrated CI/CD pipeline connected to GitHub.  
+- Used **Docker** to containerize both backend and frontend.  
+- Set up **GitHub Actions** for continuous deployment to Azure.  
+- Linked an **Azure SQL Database** for persistent data storage.  
+- Activated **Application Insights** to collect telemetry and performance metrics.  
+
+---
+
+## 🧩 Implementation Steps
+1. **Build & Containerize** the application using Spring Boot, React, and Docker.  
+2. **Push the image** to Azure Container Registry.  
+3. **Configure GitHub Actions** to deploy automatically on commit to the main branch.  
+4. **Connect Azure SQL** and manage environment variables for database credentials.  
+5. **Enable Application Insights** to monitor live usage, errors, and latency.  
+
+---
+
+## 🚀 Result
+- A fully automated **CI/CD pipeline** through GitHub Actions.  
+- Scalable and secure hosting on **Azure App Service**.  
+- Centralized monitoring with **Application Insights**.  
+- Demonstrated full DevOps workflow from build → deploy → observe.  
+
+---
+
+## 🔧 Tech Stack
+- **Azure App Service**  
+- **Azure SQL Database**  
+- **GitHub Actions (CI/CD)**  
+- **Docker**  
+- **Spring Boot / React**  
+- **Application Insights**
+
+---
+
+## 💬 Notes
+This project demonstrates the ability to design, deploy, and monitor a production-ready web application using **Microsoft Azure’s PaaS capabilities** and DevOps best practices.  
+It highlights **cloud automation, scalability, and observability** — key aspects of modern DevOps workflows.

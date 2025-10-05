@@ -27,9 +27,19 @@ import {
   SiNextdotjs,
   SiFigma,
   SiSupabase,
+  SiPostgresql,
+  SiJsonwebtokens,
+  SiAuth0,
+  SiApache,
 } from "react-icons/si";
 
-import { FaDiscord, FaGithub, FaLinkedin, FaX, FaThreads, FaXTwitter, FaFacebook, FaPinterest, FaWhatsapp, FaReddit, FaTelegram, } from "react-icons/fa6";
+import { LiaIdBadgeSolid } from "react-icons/lia";
+
+import { BiLogoSpringBoot } from "react-icons/bi";
+
+import { VscAzure } from "react-icons/vsc";
+
+import { FaDiscord, FaGithub, FaLinkedin, FaX, FaThreads, FaXTwitter, FaFacebook, FaPinterest, FaWhatsapp, FaReddit, FaTelegram, FaAws, FaJava, FaReact,  } from "react-icons/fa6";
 
 export const iconLibrary: Record<string, IconType> = {
   arrowUpRight: HiArrowUpRight,
@@ -63,6 +73,17 @@ export const iconLibrary: Record<string, IconType> = {
   whatsapp: FaWhatsapp,
   reddit: FaReddit,
   telegram: FaTelegram,
+  aws:FaAws,
+  azure:VscAzure, 
+  sb:BiLogoSpringBoot,
+  java:FaJava,
+  postg:SiPostgresql,
+  react:FaReact,
+  badge:LiaIdBadgeSolid, 
+  jwt:SiJsonwebtokens,
+  oa:SiAuth0,
+  apa:SiApache,
+
 };
 
 export type IconLibrary = typeof iconLibrary;

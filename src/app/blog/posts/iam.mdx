@@ -1,0 +1,56 @@
+---
+title: "Understanding IAM, OAuth2, and JWT: Simple Security Basics"
+summary: "A beginner-friendly guide to Identity & Access Management (IAM), OAuth2, and JWT, explained in simple terms."
+image: "/images/illust/netsec.png"
+publishedAt: "2025-07-12"
+tag: "Security/Networking"
+---
+
+# 🔐 Understanding IAM, OAuth2, and JWT: Simple Security Basics
+
+Security is at the heart of every modern application. Whether you’re building a website, a mobile app, or a cloud service, you need a way to control **who has access** and **what they can do**. That’s where **IAM, OAuth2, and JWT** come in.  
+
+This article explains these concepts in **simple terms**, so you can understand how they fit together.  
+
+---
+
+## 👤 What is IAM (Identity & Access Management)?
+
+**IAM** is about managing **users, identities, and permissions**.  
+With IAM, you can:  
+- Create users and groups.  
+- Assign roles and access levels (e.g., admin vs. reader).  
+- Enforce policies (e.g., who can delete data, who can only view).  
+
+Think of IAM as the **digital security guard** of your system.  
+
+---
+
+## 🔑 OAuth2: The Standard for Authorization
+
+OAuth2 is a protocol that lets users grant access **without sharing their password**.  
+
+Example:  
+- You log in to an app using **“Sign in with Google”**.  
+- The app never sees your Google password.  
+- Instead, Google gives the app a **token** saying you’re allowed to enter.  
+
+This keeps your credentials safe while still allowing secure connections between apps.  
+
+---
+
+## 🪙 JWT (JSON Web Token): The Token Format
+
+A **JWT** is the small, encoded file often used in OAuth2 to prove your identity.  
+It contains:  
+- **Header**: type of token + algorithm.  
+- **Payload**: user info + permissions.  
+- **Signature**: verifies the token hasn’t been changed.  
+
+✅ Example JWT (simplified):  
+```json
+{
+  "user": "chris",
+  "role": "admin",
+  "exp": 1696192000
+}

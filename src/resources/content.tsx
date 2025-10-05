@@ -2,18 +2,18 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Logo, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  firstName: "Chris",
+  lastName: "Lopez",
+  name: `Chris Lopez`,
+  role: "Dev Ops Cloud ",
+  avatar: "/images/me1.jpeg",
+  email: "chrislpz.ch@gmail.com",
+  location: "Europe/Zurich", // Expecting theIANA time zone identifier , e.g., 'Europe/Vienna'
+  languages: ["English", "French","Spanish"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: <>My weekly newsletter about creativity and engineering</>,
 };
@@ -24,55 +24,44 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/Krys03",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/chris-lopez-709620194/",
   },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
-  },
-  {
-    name: "Email",
-    icon: "email",
-    link: `mailto:${person.email}`,
-  },
+   //{
+     //name: "Email",
+     // icon: "email",
+     //link: `mailto:${person.email}`,
+   //},
 ];
 
 const home: Home = {
-  path: "/",
+  path: "/about",
   image: "/images/og/home.jpg",
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>From code to cloud
+  <br /> I make systems faster, safer, and smarter. 
+  </>,
   featured: {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
-        <Line background="brand-alpha-strong" vert height="20" />
+       
         <Text marginRight="4" onBackground="brand-medium">
-          Featured work
+          Latest works
         </Text>
+       
       </Row>
     ),
     href: "/work/building-once-ui-a-customizable-design-system",
   },
   subline: (
-    <>
-      I'm Selene, a design engineer at{" "}
-      <Logo
-        dark
-        icon="/trademarks/wordmark-dark.svg"
-        style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}
-      />
-      , where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+    <>I’m Chris, passionate about DevOps, automation, and cloud engineering
     </>
   ),
 };
@@ -90,7 +79,7 @@ const about: About = {
     display: true,
   },
   calendar: {
-    display: true,
+    display: false,
     link: "https://cal.com",
   },
   intro: {
@@ -98,9 +87,7 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+      Aspiring DevOps engineer with a strong foundation in Cloud systems and Full Stack development (Java, Spring Boot, PostgreSQL, React, Angular). Hands-on experience with Salesforce Cloud solutions and proficient in Azure and AWS. My background blends technical troubleshooting with customer-facing problem solving, bridging business needs with scalable solutions. Currently focused on cloud infrastructure, automation, CI/CD, and security to deliver efficient, reliable systems.
       </>
     ),
   },
@@ -109,42 +96,50 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Salesforce",
+        timeframe: "Sep 2024 - Jul 2025",
+        role: "Technical Account Manager",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Diagnosed and resolved Salesforce Cloud incidents including API (REST/SOAP) errors, query performance issues, and service outages.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Troubleshot and escalated integration failures between Salesforce and third-party ERP/CRM systems via middleware (e.g., MuleSoft).
           </>,
+           <>
+           Resolved authentication and access issues such as SSO/OAuth2 failures and conflicts with roles/profiles in Salesforce Identity.
+         </>,
+          <>
+         Coordinated with product and engineering teams to address critical bugs affecting sandbox/production environments and followed up on fixes during Salesforce release cycles.
+        </>,
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
+           //{
+             //src: "/images/projects/project-01/cover-01.jpg",
+             //alt: "Once UI Project",
+             //width: 16,
+             //height: 9,
+           //},
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Quantcast",
+        timeframe: "Feb 2024 - Aug 2024",
+        role: "Technical Account Manager",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+           Resolved programmatic delivery incidents such as blocked campaigns, RTB bidding errors, and sudden drops in impressions.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Supported tracking integrations by troubleshooting tags/pixels, fixing misattributed conversions, and correcting broken data feeds.
           </>,
+           <>
+           Investigated audience targeting issues including missing segments and unsynced data between Quantcast and agency DMPs/CRMs (Dentsu, Havas, Publicis).
+         </>,
+          <>
+          Escalated critical platform bugs such as UI crashes, delays in campaign activation, and API-related failures with DSPs/Ad Servers.
+        </>,
         ],
         images: [],
       },
@@ -155,12 +150,12 @@ const about: About = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Openclassrooms",
+        description: <>Master 1 Bac +4 : Software Developer Full-Stack</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Montpellier University III",
+        description: <>Diploma of Access to University Studies – Humanities, French national degree equivalent to the High School Diploma/A-levels in Humanities</>,
       },
     ],
   },
@@ -169,26 +164,30 @@ const about: About = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
+        title: "Cloud System Administration",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>Hands-on experience with AWS and Microsoft Azure, covering application deployment, cloud infrastructure management, networking, and security. Familiar with key services such as EC2, S3, App Services, and resource monitoring/optimization.</>
         ),
         tags: [
           {
-            name: "Figma",
-            icon: "figma",
+            name: " Aws",
+            icon: "aws",
+          },
+          {
+            name: " Azure",
+            icon: "azure",
           },
         ],
         // optional: leave the array empty if you don't want to display images
         images: [
           {
-            src: "/images/projects/project-01/cover-02.jpg",
+            src: "/images/illust/aws1.png",
             alt: "Project image",
             width: 16,
             height: 9,
           },
           {
-            src: "/images/projects/project-01/cover-03.jpg",
+            src: "/images/illust/ma1.jpg",
             alt: "Project image",
             width: 16,
             height: 9,
@@ -196,34 +195,71 @@ const about: About = {
         ],
       },
       {
-        title: "Next.js",
+        title: "Network and Security",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>Solid foundation in network protocols (DNS, TCP/IP, HTTPS) and Identity & Access Management (IAM) — including SSO, RBAC, OAuth2/JWT. Experienced with SSL/TLS & certificate management, secure system integration, troubleshooting, and incident handling to ensure reliable access and data protection.</>
         ),
         tags: [
           {
-            name: "JavaScript",
-            icon: "javascript",
+            name: "IAM",
+            icon: "badge",
           },
           {
-            name: "Next.js",
-            icon: "nextjs",
+            name: "JWT",
+            icon: "jwt",
           },
           {
-            name: "Supabase",
-            icon: "supabase",
+            name: "Oauth",
+            icon: "oa",
+          }, 
+          {
+            name: "Apache",
+            icon: "apa",
           },
         ],
         // optional: leave the array empty if you don't want to display images
         images: [
           {
-            src: "/images/projects/project-01/cover-04.jpg",
+            src: "/images/illust/netsec.png",
             alt: "Project image",
             width: 16,
             height: 9,
           },
         ],
-      },  
+      },
+      {
+        title: "Java Full-Stack",
+        description: (
+          <>Proficient in Java Full Stack development with experience in Spring Boot for backend APIs, Maven for build automation, and PostgreSQL for database management. Skilled in building responsive front-end applications using React and Angular, delivering scalable and user-friendly solutions.</>
+        ),
+        tags: [
+          {
+            name: "Java",
+            icon: "java",
+          },
+          {
+            name: "Springboot",
+            icon: "sb",
+          },
+          {
+            name: "Postgre Sql",
+            icon: "postg",
+          },
+          {
+            name: "React",
+            icon: "react",
+          },
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/images/illust/sr1.png",
+            alt: "Project image",
+            width: 16,
+            height: 9,
+          },
+        ],
+      },    
     ],
   },
 };
