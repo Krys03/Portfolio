@@ -187,7 +187,7 @@ const about: About = {
             height: 9,
           },
           {
-            src: "/images/illust/ma1.jpg",
+            src: "/images/illust/ma2.jpg",
             alt: "Project image",
             width: 16,
             height: 9,
