@@ -31,6 +31,7 @@ import {
   SiJsonwebtokens,
   SiAuth0,
   SiApache,
+  SiMedium,
 } from "react-icons/si";
 
 import { LiaIdBadgeSolid } from "react-icons/lia";
@@ -83,6 +84,7 @@ export const iconLibrary: Record<string, IconType> = {
   jwt:SiJsonwebtokens,
   oa:SiAuth0,
   apa:SiApache,
+  med:SiMedium,
 
 };
 

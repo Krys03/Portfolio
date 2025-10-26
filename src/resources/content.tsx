@@ -31,6 +31,11 @@ const social: Social = [
     icon: "linkedin",
     link: "https://www.linkedin.com/in/chris-lopez-709620194/",
   },
+  {
+    name: "Medium",
+    icon: "med",
+    link: "https://medium.com/@christophelopez.rb",
+  },
    //{
      //name: "Email",
      // icon: "email",
